@@ -1,3 +1,6 @@
+body {
+  background-image: url("img/background_burger.jpg");
+ }
 .App {
   text-align: center;
 }
