@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './css/Input.css';
-import db from '../configFirebase';
+import db from '../configFirestore';
+import {desayunos} from '../JSONS/desayunos.json';
+
+
 
 
 class Input extends Component {
@@ -12,20 +15,20 @@ class Input extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    
-
     render() {
         return (
             <div className="inputName">
                 <form onSubmit={this.handleSubmit}>
                     <label>
-                        Name:
+                        Cliente:
                             <input type="text" value={this.state.value} onChange={this.handleChange} />
                     </label>
                     <input type="submit" value="Submit" />
                 </form>
                 <h2>{this.state.value}</h2>
+                {console.log(desayunos)}
             </div>
+
         )
     }
     handleChange(event) {  //

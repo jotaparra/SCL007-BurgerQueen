@@ -1,0 +1,20 @@
+{
+    "desayunos":[
+        {
+            "producto": "Café Americano",
+            "precio": "$500"
+        },
+        {
+            "producto": "Café con leche",
+            "precio": "$700"
+        },
+        {
+            "producto": "Sandwich de jamón y queso",
+            "precio": "$1000"
+        },
+        {
+            "producto": "Jugo natural",
+            "precio": "$700"
+        }
+    ]
+}
