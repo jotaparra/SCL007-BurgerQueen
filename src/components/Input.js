@@ -9,13 +9,17 @@ import {desayunos} from '../JSONS/desayunos.json';
 class Input extends Component {
     constructor(props) {
         super(props);
-        this.state = { value: '' };
+        this.state = { value: '' ,
+                     desayunos: desayunos};
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     render() {
+        const desayuno = this.state.desayunos.map((desayuno, i)=>{
+            return <input key={i} type="button" value={desayuno.producto} onChange={this.handleChange}/>
+        })
         return (
             <div className="inputName">
                 <form onSubmit={this.handleSubmit}>
@@ -23,10 +27,11 @@ class Input extends Component {
                         Cliente:
                             <input type="text" value={this.state.value} onChange={this.handleChange} />
                     </label>
+                    
                     <input type="submit" value="Submit" />
                 </form>
                 <h2>{this.state.value}</h2>
-                {console.log(desayunos)}
+                {desayuno}
             </div>
 
         )

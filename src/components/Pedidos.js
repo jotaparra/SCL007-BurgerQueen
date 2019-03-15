@@ -4,15 +4,15 @@ import db from '../configFirestore';
 class Pedidos extends Component {
 
     state = {
-    Cliente: []
+    Cliente: [] 
 }
 
 
 componentDidMount(){
     db.collection('Pedidos').onSnapshot((snapShots)=>{
         this.setState({
-            Cliente: snapShots.docs.map(doc=>{
-                console.log(doc.data());
+            Cliente: snapShots.docs.map((doc)=>{
+                return console.log(doc.data());
             })
         })
     })
